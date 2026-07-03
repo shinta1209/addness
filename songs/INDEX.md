@@ -14,7 +14,8 @@
 | #王道進行 | [あの夢をなぞって](YOASOBI_あの夢をなぞって.md) | 丸サ進行とミックスして使用 |
 | #丸サ進行 | [あの夢をなぞって](YOASOBI_あの夢をなぞって.md) | YOASOBIサウンドの核 |
 | #半音上転調 | [あの夢をなぞって](YOASOBI_あの夢をなぞって.md)、[Soranji](MrsGREENAPPLE_soranji.md) | ラスサビ、V→V#経由。速い曲/バラードの比較ができる |
-| #パッシングディミニッシュ | [あの夢をなぞって](YOASOBI_あの夢をなぞって.md) | VIm→Vの間 |
+| #パッシングディミニッシュ | [あの夢をなぞって](YOASOBI_あの夢をなぞって.md)、[Soranji](MrsGREENAPPLE_soranji.md) | 「段と段の間の半段」。SoranjiはイントロのV→#Vdim7→VIm |
+| #サブドミナントマイナー | [Soranji](MrsGREENAPPLE_soranji.md) | 「夕方の切なさスイッチ」。イントロ締めのB♭→B♭m |
 | #ベース半音進行 | [Soranji](MrsGREENAPPLE_soranji.md) | Aメロ。遅い曲の推進力の作り方 |
 | #分数コード | [Soranji](MrsGREENAPPLE_soranji.md) | F/A、C/E。ベースライン設計 |
 | #sus4解決 | [Soranji](MrsGREENAPPLE_soranji.md) | Csus4→C。ドミナント前の溜め |
