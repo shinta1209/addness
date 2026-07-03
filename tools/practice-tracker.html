@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>移動ド練習トラッカー</title>
+<style>
+  :root {
+    --bg: #f7f7f8; --card: #ffffff; --text: #1a1a1e; --sub: #6b6b76;
+    --line: #e4e4e9; --accent: #4a5ad4; --done: #2e9e6b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #17171b; --card: #212127; --text: #ececf1; --sub: #9a9aa6; --line: #33333c; --accent: #8b96ff; --done: #4fc48f; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 24px 16px; background: var(--bg); color: var(--text);
+    font-family: -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 1.3rem; margin: 0 0 4px; }
+  .goal { color: var(--sub); font-size: .85rem; margin-bottom: 16px; }
+  .summary { background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 14px 16px; margin-bottom: 16px; }
+  .bar { height: 10px; background: var(--line); border-radius: 5px; overflow: hidden; margin-top: 8px; }
+  .bar > div { height: 100%; background: var(--accent); border-radius: 5px; transition: width .3s; }
+  .song { background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 12px 16px; margin-bottom: 10px; }
+  .song.complete { border-color: var(--done); }
+  .song h2 { font-size: 1rem; margin: 0 0 8px; display: flex; align-items: center; gap: 8px; }
+  .song.complete h2::after { content: "✅"; }
+  .checks { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+  label { display: inline-flex; align-items: center; gap: 6px; font-size: .85rem; color: var(--sub); cursor: pointer; }
+  input[type=checkbox] { width: 17px; height: 17px; accent-color: var(--accent); cursor: pointer; }
+  input:checked + span { color: var(--done); font-weight: 600; }
+  textarea { width: 100%; margin-top: 8px; border: 1px solid var(--line); border-radius: 8px;
+    background: var(--bg); color: var(--text); padding: 8px; font-size: .85rem; font-family: inherit; resize: vertical; min-height: 34px; }
+  .hint { color: var(--sub); font-size: .78rem; margin-top: 20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>移動ド練習トラッカー</h1>
+  <div class="goal">ゴール: 移動ドでサビだけ10曲歌える + コードで弾けて解説もできる(2026年7月)</div>
+  <div class="summary">
+    <strong id="stat"></strong>
+    <div class="bar"><div id="fill"></div></div>
+  </div>
+  <div id="songs"></div>
+  <div class="hint">チェックとメモはこのブラウザに自動保存されます(localStorage)。曲を追加したいときはFableに「トラッカーに〇〇を追加して」と言えばOK。</div>
+</div>
+<script>
+const SONGS = [
+  "あの夢をなぞって / YOASOBI",
+  "soranji / Mrs. GREEN APPLE",
+  "僕のこと / Mrs. GREEN APPLE",
+  "天国",
+  "桜日和とタイムマシン",
+  "風のゆくえ",
+  "あぶく",
+  "絶対アイドルやめないで",
+  "永遠のあくる日 / Ado",
+  "春に舞う / Ado",
+  "初恋サイダー"
+];
+const STEPS = ["移動ドでサビ歌える", "コードで弾ける", "解説できる"];
+const KEY = "doremi-tracker-v1";
+let state = JSON.parse(localStorage.getItem(KEY) || "{}");
+
+function save() { localStorage.setItem(KEY, JSON.stringify(state)); render(); }
+
+function render() {
+  const root = document.getElementById("songs");
+  root.innerHTML = "";
+  let doneSongs = 0, doneChecks = 0;
+  SONGS.forEach(name => {
+    const s = state[name] || { checks: [false,false,false], memo: "" };
+    const complete = s.checks.every(Boolean);
+    if (complete) doneSongs++;
+    doneChecks += s.checks.filter(Boolean).length;
+    const div = document.createElement("div");
+    div.className = "song" + (complete ? " complete" : "");
+    const h = document.createElement("h2"); h.textContent = name; div.appendChild(h);
+    const checks = document.createElement("div"); checks.className = "checks";
+    STEPS.forEach((step, i) => {
+      const label = document.createElement("label");
+      const cb = document.createElement("input");
+      cb.type = "checkbox"; cb.checked = s.checks[i];
+      cb.onchange = () => { s.checks[i] = cb.checked; state[name] = s; save(); };
+      const span = document.createElement("span"); span.textContent = step;
+      label.append(cb, span); checks.appendChild(label);
+    });
+    div.appendChild(checks);
+    const memo = document.createElement("textarea");
+    memo.placeholder = "メモ(キー、サビ頭の階名、つまずきポイント…)";
+    memo.value = s.memo;
+    memo.onchange = () => { s.memo = memo.value; state[name] = s; localStorage.setItem(KEY, JSON.stringify(state)); };
+    div.appendChild(memo);
+    root.appendChild(div);
+  });
+  document.getElementById("stat").textContent =
+    `完了 ${doneSongs} / ${SONGS.length} 曲(チェック ${doneChecks} / ${SONGS.length * STEPS.length})`;
+  document.getElementById("fill").style.width = (doneChecks / (SONGS.length * STEPS.length) * 100) + "%";
+}
+render();
+</script>
+</body>
+</html>
