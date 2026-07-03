@@ -17,6 +17,10 @@
 | #パッシングディミニッシュ | [あの夢をなぞって](YOASOBI_あの夢をなぞって.md)、[Soranji](MrsGREENAPPLE_soranji.md) | SoranjiはV→#Vdim7→VIm。正体はV7/VImのルート省略 |
 | #サブドミナントマイナー | [Soranji](MrsGREENAPPLE_soranji.md) | IV→IVm→I。内声にD→D♭→Cの半音下行ラインを通す |
 | #共通音持続 | [Soranji](MrsGREENAPPLE_soranji.md) | Aメロ。上声F・Aを固定しベースだけ動かす |
+| #半音下行クリシェ | [Soranji](MrsGREENAPPLE_soranji.md) | Cメロ。bass E♭→D→D♭→C→C♭、1歩ごとに機能が変わる |
+| #ベース挟み込み | [Soranji](MrsGREENAPPLE_soranji.md) | Cメロ頭。D(下)とF♭(上)でE♭を挟んで着地 |
+| #VIm6転回(#IVm7♭5) | [Soranji](MrsGREENAPPLE_soranji.md) | Cm7♭5=E♭m6/C。VImの響きのままベースを下げ続ける |
+| #繰り返しの差し替え | [Soranji](MrsGREENAPPLE_soranji.md) | ラスサビ。同じ4小節の2拍目だけI→V/IV→V/IV→III/3と交換 |
 | #ベース半音進行 | [Soranji](MrsGREENAPPLE_soranji.md) | Aメロ。遅い曲の推進力の作り方 |
 | #分数コード | [Soranji](MrsGREENAPPLE_soranji.md) | F/A、C/E。ベースライン設計 |
 | #sus4解決 | [Soranji](MrsGREENAPPLE_soranji.md) | Csus4→C。ドミナント前の溜め |
