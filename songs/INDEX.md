@@ -17,7 +17,8 @@
 | #パッシングディミニッシュ | [あの夢をなぞって](YOASOBI_あの夢をなぞって.md)、[Soranji](MrsGREENAPPLE_soranji.md) | SoranjiはV→#Vdim7→VIm。正体はV7/VImのルート省略 |
 | #サブドミナントマイナー | [Soranji](MrsGREENAPPLE_soranji.md) | IV→IVm→I。内声にD→D♭→Cの半音下行ラインを通す |
 | #共通音持続 | [Soranji](MrsGREENAPPLE_soranji.md) | Aメロ。上声F・Aを固定しベースだけ動かす |
-| #半音下行クリシェ | [Soranji](MrsGREENAPPLE_soranji.md) | Cメロ。bass E♭→D→D♭→C→C♭、1歩ごとに機能が変わる |
+| #半音下行クリシェ | [Soranji](MrsGREENAPPLE_soranji.md)、[あの夢をなぞって](YOASOBI_あの夢をなぞって.md) | Soranjiは5歩(Cメロ)、あの夢は2歩(サビ中盤F→E→E♭)。規模の違い=感情の深さ |
+| #Vm借用(IVへのツーファイブ) | [あの夢をなぞって](YOASOBI_あの夢をなぞって.md) | サビ中盤。Vm7→I7→IVM7でIVへ滑り込む |
 | #ベース挟み込み | [Soranji](MrsGREENAPPLE_soranji.md) | Cメロ頭。D(下)とF♭(上)でE♭を挟んで着地 |
 | #VIm6転回(#IVm7♭5) | [Soranji](MrsGREENAPPLE_soranji.md) | Cm7♭5=E♭m6/C。VImの響きのままベースを下げ続ける |
 | #繰り返しの差し替え | [Soranji](MrsGREENAPPLE_soranji.md) | ラスサビ。同じ4小節の2拍目だけI→V/IV→V/IV→III/3と交換 |
