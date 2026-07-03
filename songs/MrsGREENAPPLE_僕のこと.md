@@ -36,8 +36,9 @@ D#dim7(D#・F#・A・C)は **B7(♭9)のルート省略形 = Em(VIm)へのセカ
 
 ```
 ♪ いつも僕は──自分に言い聞かせる
-   C → Gdim7 → D → D#dim7 → Am7 → Dsus4 → D
-   IV → (#IVdim7系) → V → #Vdim7 → IIm7 → Vsus4 → V
+   C  → Gdim7 → D → D#dim7 → Am7 → Dsus4 → D
+   IV → #IVdim7系 → V → #Vdim7 → IIm7 → Vsus4 → V
+   bass: C → C#(推定) → D → D# → A → D → D
 ```
 - dim7の2連発。dim7コードは短3度ごとに同じ構成音になる(Gdim7 = C#dim7 = Edim7 = B♭dim7)ため、Gdim7の実体は **#IVdim7系(C#・E・G・B♭)**
 - 構成音から推定すると bass は `C→C#→D→D#→(E)` の**半音4連上行**の可能性が高い(要確認)。SoranjiのCメロが半音5連「下行」だったのと表裏の関係
