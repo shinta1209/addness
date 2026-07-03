@@ -21,6 +21,8 @@
 | #ベース挟み込み | [Soranji](MrsGREENAPPLE_soranji.md) | Cメロ頭。D(下)とF♭(上)でE♭を挟んで着地 |
 | #VIm6転回(#IVm7♭5) | [Soranji](MrsGREENAPPLE_soranji.md) | Cm7♭5=E♭m6/C。VImの響きのままベースを下げ続ける |
 | #繰り返しの差し替え | [Soranji](MrsGREENAPPLE_soranji.md) | ラスサビ。同じ4小節の2拍目だけI→V/IV→V/IV→III/3と交換 |
+| #カノン進行 | [僕のこと](MrsGREENAPPLE_僕のこと.md) | サビ。7つ目をIV→IImに差し替えた変形 |
+| #セカンダリードミナント(dim7変装) | [Soranji](MrsGREENAPPLE_soranji.md)、[僕のこと](MrsGREENAPPLE_僕のこと.md) | #Vdim7→VIm。**大森元貴の指癖疑惑、2曲で確認済み** |
 | #ベース半音進行 | [Soranji](MrsGREENAPPLE_soranji.md) | Aメロ。遅い曲の推進力の作り方 |
 | #分数コード | [Soranji](MrsGREENAPPLE_soranji.md) | F/A、C/E。ベースライン設計 |
 | #sus4解決 | [Soranji](MrsGREENAPPLE_soranji.md) | Csus4→C。ドミナント前の溜め |
@@ -32,10 +34,10 @@
 
 - [x] あの夢をなぞって / YOASOBI(2026-07-03 分析済み)
 - [x] soranji / Mrs. GREEN APPLE(2026-07-03 ガチ分析済み)
-- [ ] 僕のこと / Mrs. GREEN APPLE
-- [ ] 天国
-- [ ] 桜日和とタイムマシン
-- [ ] 風のゆくえ
+- [~] 僕のこと / Mrs. GREEN APPLE(2026-07-03 サビだけクイック済み。キーG/BPM80)
+- [ ] 天国(どのアーティストの「天国」か要確認)
+- [ ] 桜日和とタイムマシン / Ado with 初音ミク(基本情報のみ取得済: キーE♭・BPM174・まふまふ作)
+- [ ] 風のゆくえ / Ado(基本情報のみ取得済: キーD♭・BPM70〜73・秦基博作・ラスサビ+1転調)
 - [ ] あぶく
 - [ ] 絶対アイドルやめないで
 - [ ] 永遠のあくる日 / Ado
