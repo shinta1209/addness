@@ -18,7 +18,10 @@
 | #サブドミナントマイナー | [Soranji](MrsGREENAPPLE_soranji.md) | IV→IVm→I。内声にD→D♭→Cの半音下行ラインを通す |
 | #共通音持続 | [Soranji](MrsGREENAPPLE_soranji.md) | Aメロ。上声F・Aを固定しベースだけ動かす |
 | #半音下行クリシェ | [Soranji](MrsGREENAPPLE_soranji.md)、[あの夢をなぞって](YOASOBI_あの夢をなぞって.md) | Soranjiは5歩(Cメロ)、あの夢は2歩(サビ中盤F→E→E♭)。規模の違い=感情の深さ |
-| #Vm借用(IVへのツーファイブ) | [あの夢をなぞって](YOASOBI_あの夢をなぞって.md) | サビ中盤。Vm7→I7→IVM7でIVへ滑り込む |
+| #Vm借用(IVへのツーファイブ) | [あの夢をなぞって](YOASOBI_あの夢をなぞって.md)、[桜日和とタイムマシン](Ado_桜日和とタイムマシン.md) | Vm7→(I7)→IVへ滑り込む借用 |
+| #マイナーツーファイブ | [桜日和とタイムマシン](Ado_桜日和とタイムマシン.md) | サビ1行目。Em7♭5→A7→Dm7。VImへの3ルート目 |
+| #ベース半音上行 | [桜日和とタイムマシン](Ado_桜日和とタイムマシン.md)、[僕のこと](MrsGREENAPPLE_僕のこと.md) | サビ出口G→A→B♭→B→C / dim7連発C→C#→D→D#(推定) |
+| #サビで全音上転調 | [桜日和とタイムマシン](Ado_桜日和とタイムマシン.md) | メロE♭→サビF。コードでなく調でサビを盛る |
 | #ベース挟み込み | [Soranji](MrsGREENAPPLE_soranji.md) | Cメロ頭。D(下)とF♭(上)でE♭を挟んで着地 |
 | #VIm6転回(#IVm7♭5) | [Soranji](MrsGREENAPPLE_soranji.md) | Cm7♭5=E♭m6/C。VImの響きのままベースを下げ続ける |
 | #繰り返しの差し替え | [Soranji](MrsGREENAPPLE_soranji.md) | ラスサビ。同じ4小節の2拍目だけI→V/IV→V/IV→III/3と交換 |
@@ -37,7 +40,7 @@
 - [x] soranji / Mrs. GREEN APPLE(2026-07-03 ガチ分析済み)
 - [~] 僕のこと / Mrs. GREEN APPLE(2026-07-03 サビだけクイック済み。キーG/BPM80)
 - [ ] 天国(どのアーティストの「天国」か要確認)
-- [ ] 桜日和とタイムマシン / Ado with 初音ミク(基本情報のみ取得済: キーE♭・BPM174・まふまふ作)
+- [~] 桜日和とタイムマシン / Ado with 初音ミク(2026-07-03 サビ分析済み。メロE♭→サビF転調・BPM174。メロ/ラスサビ要スクショ)
 - [ ] 風のゆくえ / Ado(基本情報のみ取得済: キーD♭・BPM70〜73・秦基博作・ラスサビ+1転調)
 - [ ] あぶく
 - [ ] 絶対アイドルやめないで
