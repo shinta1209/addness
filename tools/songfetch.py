@@ -143,6 +143,47 @@ def cmd_page(url: str) -> None:
         print(f"{kind}: {ln}")
 
 
+def cmd_mc(url: str) -> None:
+    """music-chord.com専用: セクション名+歌詞(タイムスタンプ付き)+コードを文書順に出す"""
+    html = fetch(url).decode("utf-8", "replace")
+    # 文書順にトークン化: セクション名 / タイムスタンプ / 歌詞 / コード(Base+Quality)
+    pat = re.compile(
+        r'Content__SectionName[^>]*>(?P<sec>[^<]*)<'
+        r'|YoutubeSeekButton__Button[^>]*>(?P<ts>[^<]*)</span>\s*(?:<!--[^>]*-->)?\s*(?P<lyric>[^<]*)'
+        r'|Chord__Container[^>]*>(?P<chord>.*?)</div>',
+        re.S,
+    )
+    def chord_name(inner: str) -> str:
+        base = re.search(r'Base__Container[^>]*>([^<]*)<', inner)
+        qual = re.search(r'Quality__Container[^>]*>([^<]*)<', inner)
+        return (base.group(1) if base else "") + (qual.group(1) if qual else "")
+
+    row_lyric, row_chords, row_ts = None, [], ""
+
+    def flush():
+        nonlocal row_lyric, row_chords, row_ts
+        if row_lyric is not None or row_chords:
+            lyric = (row_lyric or "").strip() or "(インスト)"
+            chords = " → ".join(c for c in row_chords if c) or "(N.C.)"
+            print(f"  [{row_ts}] ♪ {lyric}")
+            print(f"       {chords}")
+        row_lyric, row_chords, row_ts = None, [], ""
+
+    for m in pat.finditer(html):
+        if m.group("sec") is not None:
+            flush()
+            print(f"\n== {m.group('sec').strip()} ==")
+        elif m.group("ts") is not None:
+            flush()
+            row_ts = m.group("ts").strip()
+            row_lyric = m.group("lyric")
+        elif m.group("chord") is not None:
+            name = chord_name(m.group("chord"))
+            if name:
+                row_chords.append(name)
+    flush()
+
+
 def main() -> None:
     if len(sys.argv) < 2:
         print(__doc__)
@@ -154,6 +195,8 @@ def main() -> None:
         cmd_songle(sys.argv[2])
     elif cmd == "page" and len(sys.argv) > 2:
         cmd_page(sys.argv[2])
+    elif cmd == "mc" and len(sys.argv) > 2:
+        cmd_mc(sys.argv[2])
     else:
         print(__doc__)
         sys.exit(1)

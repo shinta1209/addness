@@ -55,12 +55,14 @@ description: 曲名を渡すと、キー・BPM・コード進行(ディグリー
 
 **セッション開始時にまず `python3 tools/songfetch.py probe` を実行**して、その環境で外に出られるか確認する。結果でルートを選ぶ:
 
-### probeが通る環境(ネットワーク開放済み or ローカル実行)
-1. **Songleでサビ区間検出**: `python3 tools/songfetch.py songle <公式MVのYouTube URL>`
-   → サビの時間区間(RefraiD自動検出)+区間内のコード進行が出る。「どこがサビか」を推定でなくデータで確定できる(自動解析なので細部は譜面と突き合わせ)
-2. **コード譜ページ直接取得**: `python3 tools/songfetch.py page <ChordWiki等のURL>`
-   → CHORD行とLYRIC行が交互に出る(歌詞アンカー付き進行がそのまま取れる)。静的サイト(ChordWiki/J-Total/楽器.me)向き。U-フレットはJS描画なのでPlaywright(/opt/pw-browsers/chromium)が必要
-3. 取れたら通常の分析フロー(ディグリー化・4段組・完全性チェック)へ
+### probeが通る環境(ネットワーク開放済み or ローカル実行)※2026-07-03開放済み・実証済み
+1. **本命: music-chord.com**: `python3 tools/songfetch.py mc "https://music-chord.com/songs/<曲名>-<アーティスト>/"`
+   → **セクション名・タイムスタンプ・歌詞・コードの完全対応が一発で取れる**(あぶくで実証)。URLは `mc "https://music-chord.com/songs/" `+URLエンコードした「曲名-アーティスト」。見つからない場合はWebSearchで「曲名 music-chord」を検索してURLを取る
+   - 注意: music-chordはMV同期チャートなのでキーの信頼度が高い。ブログのキー表記と食い違ったらチャート優先
+2. **Songleでサビ区間検出**: `python3 tools/songfetch.py songle <公式MVのYouTube URL>`(登録曲のみ。未登録なら404)
+3. **汎用ページ取得**: `python3 tools/songfetch.py page <URL>`(静的サイト向け。楽器.me/J-Total等)
+4. ❌ ChordWikiはサイト側がボット遮断(ネットワーク開放後も403)。U-フレットはJS描画のため page では取れない
+5. 取れたら通常の分析フロー(ディグリー化・4段組・完全性チェック)へ
 
 ### probeが全滅する環境(クラウドサンドボックス既定)
 - ✅ **WebSearchのスニペット/AI要約のみ通る**。クエリ順: ①「曲名 アーティスト サビ コード進行 キー BPM」→ ②コード名や歌詞断片を引用符で再検索 → ③「曲名 何調 転調 解説」
