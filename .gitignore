@@ -3,3 +3,8 @@ __pycache__/
 
 # クライアント機密(公開リポジトリのためコミット禁止)
 clients/
+
+# 音声ファイル(著作物・個人練習用途のみ、コミット禁止)
+songs/_audio/
+work/vocal/*.wav
+work/vocal/*.m4a
